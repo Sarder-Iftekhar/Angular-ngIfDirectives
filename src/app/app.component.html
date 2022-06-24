@@ -1,0 +1,24 @@
+
+<!-- Only if condition  without else -->
+<h1 *ngIf="show">
+  <!--     here ngIf is executed according to condition(show variable's value), when condition is true then <h1></h1> tag will execute-->
+  First If condition is satisfied
+</h1>
+
+
+
+<!-- lets check both if else condition -->
+
+<h1 *ngIf="show else elseblock"> 
+ 2nd If condition is satisfied
+</h1>
+<!--The <ng-template> is an Angular element for rendering HTML. It is never displayed directly.
+  its use for rendering else condition
+  -->
+<ng-template #elseblock>
+  <h1>
+
+    This is from else block, That means if condion is not true
+
+  </h1>
+</ng-template>
